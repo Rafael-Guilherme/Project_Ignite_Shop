@@ -2,14 +2,6 @@ import { stripe } from "@/lib/stripe";
 import ProductsList from "@/components/ProductsList";
 import Stripe from "stripe";
 
-export interface HomeProps {
-  products: {
-    id: string;
-    name: string;
-    imageUrl: string;
-    price: string;
-  }[];
-}
 
 export default async function Home() {
   const response = await stripe.products.list({
@@ -30,5 +22,6 @@ export default async function Home() {
     };
   });
 
-  return <ProductsList products={products} />;
+  return <ProductsList products={products} />
+  
 }

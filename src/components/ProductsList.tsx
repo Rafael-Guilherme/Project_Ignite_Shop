@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useKeenSlider } from 'keen-slider/react'
 
 import 'keen-slider/keen-slider.min.css'
-import { HomeProps } from "@/app/page";
+import { HomeProps } from "@/utils/homeProps";
 
 export default function ProductsList({ products }: HomeProps) {
     const [sliderRef] = useKeenSlider({
@@ -28,6 +28,7 @@ export default function ProductsList({ products }: HomeProps) {
                     <Link 
                         key={product.id}
                         href={`/product/${product.id}`}
+                        prefetch={false}
                         className="keen-slider__slide group bg-gradient-to-b from-teal-500 via-teal-600 to-purple-500 rounded-lg p-1 relative flex items-center justify-center object-cover"
                     >
                         <Image src={product.imageUrl} width={520} height={480} alt='camiseta rocketseat' />
