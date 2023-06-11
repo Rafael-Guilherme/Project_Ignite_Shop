@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${roboto.variable}`}>
-        <div className='flex flex-col items-start justify-center min-h-full'>
+        <div className='flex flex-col items-center justify-start min-h-full'>
           <header className='flex items-center justify-center py-10 w-full m-w-[1180px] my-0 mx-auto'>
             <Image src={logoImg} alt='logo Ignite shop' />
           </header>

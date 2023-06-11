@@ -19,4 +19,5 @@
 body {
   color: #e1e1e6;
   background-color: #121214;
+  box-sizing: border-box;
 }
