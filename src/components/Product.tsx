@@ -26,7 +26,7 @@ export default function Product({ productDetails }: ProductProps) {
         try {
             setIsCreatingCheckoutSession(true)
 
-            const response = await axios.post('/api/checkout', {
+            const response = await axios.post('https://project-ignite-shop.vercel.app/api/checkout', {
                 priceId: defaultPriceId
             })
 
